@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Inicio de sesión"; // Cambia el título según lo que desees
+}
+@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger mt-5">
+        @TempData["ErrorMessage"]
+    </div>
+}
+@using (Html.BeginForm("Login", "Autenticacion", FormMethod.Post, new { @class = "mt-5" }))
+{
+    <div class="container mt-5">
+        <!-- Encabezado -->
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="text-center mb-3">
+                    <img src="\Content\logoRouge.png" alt="Logo" width="100" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario de inicio de sesión -->
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group mt-3">
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" class="form-control" name="usuario" />
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="clave">Clave:</label>
+                            <input type="password" class="form-control" name="clave" />
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-5">Iniciar sesión</button>
+                        <p class="text-center mt-3">
+                            <a href="#">¿Olvidaste tu contraseña?</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

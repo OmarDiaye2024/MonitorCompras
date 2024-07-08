@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "About";
+    ViewBag.Icon = "";
+}
+<h2>Datos:</h2>
+<table border="1">
+    <tr>
+        @foreach (System.Data.DataColumn column in ViewBag.DataTable.Columns)
+        {
+            <th>@column.ColumnName</th>
+        }
+    </tr>
+
+    @foreach (System.Data.DataRow row in ViewBag.DataTable.Rows)
+    {
+        <tr>
+            @foreach (var cell in row.ItemArray)
+            {
+                <td>@cell.ToString()</td>
+            }
+        </tr>
+    }
+</table>
+
+
+<script src="~/Scripts/Data.js"></script>

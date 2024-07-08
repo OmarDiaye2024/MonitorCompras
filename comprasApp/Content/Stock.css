@@ -1,0 +1,153 @@
+﻿/* Estilos para la tabla */
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.2em;
+    min-width: 800px; /* Establecer un ancho mínimo para evitar que la tabla se estire demasiado */
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+    .content-table thead tr {
+        background-color: #950025;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .content-table th,
+    .content-table td {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+        transition: background-color 0.3s ease;
+    }
+
+        .content-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .content-table tbody tr:last-of-type {
+            border-bottom: 2px solid #950025;
+        }
+
+        .content-table tbody tr.active-row {
+            font-weight: bold;
+            color: #950025;
+        }
+
+        .content-table tbody tr:hover {
+            background-color: #f1f1f1;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .content-table tbody tr:hover td {
+                color: #000000;
+            }
+
+    .content-table th:hover {
+        background-color: #742028;
+        cursor: pointer;
+    }
+
+/* Estilos para los botones */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px; /* Espacio entre la tabla y los botones */
+}
+
+.boton {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #950025;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(149, 0, 37, 0.5);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+    .boton:hover {
+        background-color: #000000;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+        transform: translateY(-7px);
+    }
+
+    .boton:active {
+        background-color: #950025;
+        box-shadow: 0px 15px 20px rgba(46, 0, 157, 0.4);
+    }
+h1 {
+    text-align: center; /* Centrar el texto */
+    margin-top: 50px; /* Espacio superior */
+    font-size: 48px; /* Tamaño de fuente */
+    color: #333; /* Color del texto (gris oscuro) */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    letter-spacing: 3px; /* Espaciado entre letras */
+    font-weight: bold; /* Negrita */
+    border-bottom: 3px solid #007bff; /* Línea inferior azul (color primario) */
+    padding-bottom: 20px; /* Espacio entre el texto y la línea inferior */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra suave del texto */
+    background-color: #f8f9fa; /* Color de fondo (gris claro) */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del título */
+    max-width: 80%; /* Ancho máximo del título */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+    padding: 30px; /* Espaciado interno */
+    transition: all 0.3s ease; /* Efecto de transición suave */
+    position: relative; /* Establecer posición relativa */
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+    display: inline-block; /* Mostrar como bloque en línea */
+}
+
+    h1:before {
+        content: ''; /* Contenido antes del título */
+        position: absolute; /* Establecer posición absoluta */
+        top: 0; /* Posicionar en la parte superior */
+        left: -50%; /* Posicionar a la izquierda, fuera de la pantalla */
+        width: 200%; /* Ancho del elemento dos veces el del título */
+        height: 100%; /* Altura completa */
+        background: linear-gradient(45deg, #007bff, #00bfff); /* Degradado diagonal (colores primarios) */
+        z-index: -1; /* Colocar detrás del texto */
+        transition: all 0.5s ease; /* Efecto de transición suave */
+    }
+
+    h1:hover:before {
+        left: 150%; /* Mover completamente hacia la derecha al pasar el mouse */
+    }
+
+    h1 span {
+        position: relative; /* Establecer posición relativa */
+        z-index: 1; /* Asegurarse de que el texto esté delante del fondo */
+    }
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+h1:hover span {
+    animation: rotate 2s linear infinite; /* Animación de rotación al pasar el mouse */
+}
+

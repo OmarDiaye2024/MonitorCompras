@@ -1,0 +1,296 @@
+body {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100vh; 
+  margin-right: 50%;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between; 
+    margin: 200px;
+    max-width: 1000px; 
+  
+}
+
+
+.wallet {
+  --bg-color: #950025;
+  --bg-color-light: #f0e7ff;
+  --text-color-hover: #fff;
+  --box-shadow-color: rgba(207, 1, 1, 0.48);
+}
+.wallet2 {
+  --bg-color: #000000;
+  --bg-color-light: #f0e7ff;
+  --text-color-hover: #fff;
+  --box-shadow-color: rgba(0, 0, 0, 0.48);
+  
+}
+/*carta perfume*/
+.card {
+  width: 440px; 
+  height: 642px; 
+  margin-top: 10%; 
+  left: 55%; 
+  background: #fff;
+  border-top-right-radius: 20px; 
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 28px 52px rgba(0, 0, 0, 0.04); 
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+  cursor:pointer;
+  
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.01) translateZ(0); 
+  box-shadow: 0 48px 72px rgba(0, 0, 0, 0.11), 
+    0 48px 92px var(--box-shadow-color);
+}
+
+.card:hover .overlay {
+  transform: scale(8) translateZ(0);
+}
+
+.card:hover .circle {
+  border-color: var(--bg-color-light);
+  background: var(--bg-color);
+}
+
+.card:hover .circle:after {
+  background: var(--bg-color-light);
+}
+
+.card:hover p {
+  color: var(--text-color-hover);
+}
+
+.card p {
+  font-family: monserrat;
+  font-weight: 600;
+  font-size: 34px;
+  color: #4c5656;
+  margin-top: 60px; 
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+/*carta hogar*/
+.card2 {
+  width: 440px;
+  height: 642px; 
+  margin-top: 10%; 
+  left: 50%; 
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 28px 52px rgba(0, 0, 0, 0.04); 
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; 
+  cursor:pointer;
+}
+
+.card2:hover {
+  transform: translateY(-10px) scale(1.01) translateZ(0); 
+  box-shadow: 0 48px 72px rgba(0, 0, 0, 0.11), 
+    0 48px 92px var(--box-shadow-color);
+}
+
+.card2:hover .overlay {
+  transform: scale(8) translateZ(0);
+}
+
+.card2:hover .circle {
+  border-color: var(--bg-color-light);
+  background: var(--bg-color);
+}
+
+.card2:hover .circle:after {
+  background: var(--bg-color-light);
+}
+
+.card2:hover p {
+  color: var(--text-color-hover);
+}
+
+.card2 p {
+  font-family: monserrat;
+  font-weight: 600;
+  font-size: 34px;
+  color: #4c5656;
+  margin-top: 60px; 
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+
+
+.circle {
+  width: 262px; 
+  height: 262px; 
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.circle img {
+  max-width: 60%;
+  max-height: 60%; 
+  position: relative;
+  z-index: 2; 
+}
+
+
+
+.circle:after {
+  content: "";
+  width: 236px; 
+  height: 236px; 
+  display: block;
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: 50%;
+  top: 14px; 
+  left: 14px; 
+  transition: opacity 0.3s ease-out;
+}
+
+.circle svg {
+  z-index: 10000;
+  transform: translateZ(0);
+}
+
+.overlay {
+  width: 236px; 
+  position: absolute;
+  height: 236px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 140px; 
+  left: 100px; 
+  z-index: 0;
+  transition: transform 0.5s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column; 
+    align-items: center;
+    margin: 20px; 
+  }
+
+  .card {
+    width: 100%; 
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+/*LOADER PARA LOGIN Y FILTRO*/
+
+.loader {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(165deg);
+}
+
+    .loader:before, .loader:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 0.25em;
+        transform: translate(-50%, -50%);
+    }
+
+    .loader:before {
+        animation: before8 2s infinite;
+    }
+
+    .loader:after {
+        animation: after6 2s infinite;
+    }
+
+@keyframes before8 {
+    0% {
+        width: 0.5em;
+        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+
+    35% {
+        width: 2.5em;
+        box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+    }
+
+    70% {
+        width: 0.5em;
+        box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+
+    100% {
+        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+}
+
+@keyframes after6 {
+    0% {
+        height: 0.5em;
+        box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+
+    35% {
+        height: 2.5em;
+        box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+    }
+
+    70% {
+        height: 0.5em;
+        box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+    }
+
+    100% {
+        box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+}
+
+.loader {
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em);
+}
+
+
+/*FIN DE PREFILTRO*/
+
+
+
+/*VISTA INDEX*/
+
+
+

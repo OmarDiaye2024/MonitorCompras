@@ -1,0 +1,38 @@
+ROUGE COMPRAS TIENE QUE ESTAR HECHO Y FUNCIONANDO EL 
+PREFILTRO  (la pantalla maison y pperfumeria) PARA LA SEMANA DEL  19/5
+--------------------------------------------------------------
+
+registros de ventas semanales 
+SEMANA = LUNES A DOMINGO
+
+Quiere ver 4 columnas las 4 semanas y otra mas 
+el total del mes.
+
+1 semana actual.
+2 semana anterior.
+3 semana anterior a anterior.
+4 semana anterior del anterior.
+ 
+
+---------------------------------------------------------
+
+Quiere ver el Stock de Sap.
+del 1800. 
+revisar querys.
+
+-----------------------------
+revisar las querys sobre costo
+------------------------------
+
+Prioridad de avance.
+
+Prefiltro => Stock => Costo =>  venta por Semana => ABM para los prefiltros.
+
+costo= costo por sku del producto.
+-------------------------------------  
+
+trabajar stock y costo pero si nos trabamos pasar a otra tarea
+para avanzar. 
+
+cuando se traiga el costo es el margen  de la diferencia
+

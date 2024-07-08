@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null; // Esto desactiva el diseño predeterminado de la página para esta vista
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontFiltro</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="~/Content/Index.css">
+    <link rel="shortcut icon" href="~/Content/Wallet.png" />
+</head>
+<body>
+    <!--tarjeta-->
+    <div class="card-container">
+
+        <a class="card2 wallet2" href="@Url.Action("IndexMaison", "Maison")">
+            <div class="overlay"></div>
+            <div class="circle">
+                <img src="~/Content/sillon.png">
+            </div>
+            <p>Decoración</p>
+        </a>
+
+        <!-- Segunda tarjeta -->
+        <a class="card wallet" href="@Url.Action("Index", "Home")">
+
+            <div class="overlay"></div>
+            <div class="circle">
+                <img src="~/Content/parfum.png">
+            </div>
+            <p>Perfumeria</p>
+
+
+        </a>
+    </div>
+</body>
+</html>
+
+
